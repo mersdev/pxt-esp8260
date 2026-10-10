@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#c1ecd4", "surface-bright": "#fff8f5", "on-surface-variant": "#554339", "surface-variant": "#ebe0db", "on-tertiary": "#ffffff", "on-secondary-container": "#436b58", "tertiary-fixed-dim": "#75daa8", "on-primary-fixed": "#321200", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#ffb68c", "on-primary-fixed-variant": "#753400", "on-secondary-fixed-variant": "#274e3d", "secondary-fixed-dim": "#a5d0b9", "on-secondary-fixed": "#002114", "surface-container": "#f6ece7", "tertiary-fixed": "#92f7c3", "on-secondary": "#ffffff", "error-container": "#ffdad6", "tertiary": "#006a46", "error": "#ba1a1a", "on-error-container": "#93000a", "on-primary-container": "#491d00", "on-primary": "#ffffff", "on-tertiary-fixed": "#002113", "surface": "#fff8f5", "tertiary-container": "#10855a", "on-error": "#ffffff", "secondary-container": "#beead1", "surface-tint": "#994703", "on-surface": "#1f1b18", "primary-container": "#d97736", "inverse-on-surface": "#f9efea", "surface-container-high": "#f0e6e1", "surface-container-highest": "#ebe0db", "inverse-primary": "#ffb68c", "secondary": "#3f6653", "on-background": "#1f1b18", "background": "#fff8f5", "surface-dim": "#e2d8d3", "primary": "#994703", "outline": "#887367", "primary-fixed": "#ffdbc9", "on-tertiary-container": "#f5fff6", "on-tertiary-fixed-variant": "#005235", "outline-variant": "#dbc1b4", "surface-container-low": "#fcf2ec", "inverse-surface": "#352f2c" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "margin-desktop": "3rem", "space-lg": "1.5rem", "margin-tablet": "2rem", "space-xl": "2.25rem", "space-2xl": "3.5rem", "gutter": "1.25rem", "gutter-desktop": "1.5rem", "margin": "1rem", "space-xxs": "0.25rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "space-md": "1rem", "gutter-tablet": "1rem" }, "fontFamily": { "headline-md": [ "Bricolage Grotesque" ], "body-lg": [ "Space Grotesk" ], "display-hero-mobile": [ "Bricolage Grotesque" ], "headline-lg": [ "Bricolage Grotesque" ], "body-md": [ "Space Grotesk" ], "label-sm": [ "Space Grotesk" ], "label-lg": [ "Space Grotesk" ], "label-md": [ "Space Grotesk" ], "body-sm": [ "Space Grotesk" ], "data-tabular": [ "Space Grotesk" ], "display-hero": [ "Bricolage Grotesque" ], "headline-lg-mobile": [ "Bricolage Grotesque" ], "headline-sm": [ "Bricolage Grotesque" ] }, "fontSize": { "headline-md": [ "24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "display-hero-mobile": [ "36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "data-tabular": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "display-hero": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs"><img alt="Sprout &amp; Heirloom Seed Library Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ0JomceGYD_UKQR7KUFppAl24qNgKeiz8-TFo7hf50Nw-e5wIZmsCaigDbBjaKYQe-rbqkgpRtox8VE0fV_h68k6HG93APC1t4nbTVmQbn5OKYHF6TF0vNNMHRoky7mjGh7LJsqGcr9J1d5-gK1AXDxWW8ddh_JwLHSoE9p5LBozAXSgcVodk0G8UFSX9JfPSoyPn7llMlRslWZbtjo4fY54ushR8dFoXhF8B-kChKeXFX4H7zqZM-Q"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Folium</span><span class="font-label-sm text-label-sm uppercase text-secondary tracking-widest">Heritage Seed Bank</span></div></div><div class="bg-secondary-container/40 rounded-DEFAULT px-space-sm py-space-xs flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-sm">warehouse</span><span class="font-label-sm text-label-sm text-on-secondary-fixed-variant">Branch #04</span></div><span class="font-label-sm text-label-sm bg-surface-container-lowest text-secondary px-space-xs py-0.5 rounded-full">Vault A-12</span></div><nav class="flex flex-col gap-space-xxs" data-active-classes="bg-secondary text-on-secondary shadow-sm font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="overview-and-catalog" href="#"><span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">dashboard</span><span class="font-body-md text-body-md">Overview &amp; Catalog</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="seed-varieties-and-inventory" href="#"><span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">psychiatry</span><span class="font-body-md text-body-md">Seed Varieties &amp; Stock</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="lending-and-returns" href="#"><span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">sync_alt</span><span class="font-body-md text-body-md">Lending &amp; Returns</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="growing-guides-and-cultivation" href="#"><span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">menu_book</span><span class="font-body-md text-body-md">Growing Guides</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="seed-savers-and-donors" href="#"><span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">nature_people</span><span class="font-body-md text-body-md">Seed Savers &amp; Donors</span></a></nav></div><div class="flex flex-col gap-space-sm pt-space-md bg-surface-container-lowest/60 rounded-DEFAULT p-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Vault Storage Viability</span><span class="font-data-tabular text-data-tabular text-secondary font-bold">94.2%</span></div><div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden"><div class="bg-secondary h-full rounded-full" style="width: 94.2%"></div></div><div class="flex items-center justify-between text-on-surface-variant pt-space-xxs"><span class="font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-xs text-primary">thermostat</span> 14°C</span><span class="font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-xs text-secondary">water_drop</span> 32% RH</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 px-gutter-desktop flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full bg-surface-container-lowest pl-10 pr-space-md py-2 rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Search 1,420+ heirloom varieties, latin names, growers..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs bg-secondary-fixed/50 px-space-sm py-1.5 rounded-full"><span class="material-symbols-outlined text-secondary text-sm">spa</span><span class="font-label-md text-label-md text-on-secondary-fixed-variant">Zone 7b • Early Spring Sowing Active</span></div><button class="relative p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><button class="flex items-center gap-space-xs bg-primary text-on-primary px-space-md py-2 rounded-full font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-all shadow-sm"><span class="material-symbols-outlined text-sm">add</span><span>Log Seed Intake</span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn3UWxPryooL0FDzkiSaD_sogm8Fj3GHGfIFo2zA4PgGLoC6mR39l2lNBzuzCxQp5W_UwHUhSCNwK3LFINtiRZifCSSPNJSjQfrTc2Rtve1gEAdk2SNr9eZckg8u8hltqWfYBQOn3jOt6KqGCNrDN1lw11TIUokAiKbwjET-2hNMOSfLu_BKCZtp_zjqsJ7DTi3ga7oqZDrXRtfZuZsHqrOVFWSUDKc1CxSQ0VP47lol-jk7TDw8sWPg"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Clara Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Head Seed Curator</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter-desktop py-space-lg"><div class="flex flex-col w-full gap-space-xl">
+<!-- SEASONAL CURATOR HERO & WORKBENCH OVERVIEW -->
+<section class="relative bg-surface-container-low rounded-xl p-space-xl shadow-sm overflow-hidden">
+<div class="absolute -right-16 -top-20 w-80 h-80 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/4 -bottom-24 w-72 h-72 rounded-full bg-primary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div class="flex flex-col max-w-3xl gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">eco</span>
+            Zone 7b Phenology Active
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">autorenew</span>
+            Last Expected Frost: Apr 18
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+          Spring Equinox Sowing Season
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Optimal indoor germination window for Nightshades &amp; Brassicas. 38 community seed packages pledged for return this cycle across regional community plots.
+        </p>
+</div>
+<!-- Quick Action Bar -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:opacity-95 shadow-md hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+<span>Register New Variety</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container-lowest text-secondary font-label-md text-label-md hover:bg-surface-container transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm">print</span>
+<span>Batch Print Envelopes</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm">assignment_turned_in</span>
+<span>Record Harvest Return</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all shadow-sm">
+<span class="material-symbols-outlined text-base">science</span>
+</button>
+</div>
+</div>
+<!-- Live KPI Stat Highlights Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mt-space-xl">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Total Seed Varieties</span>
+<span class="material-symbols-outlined text-secondary text-lg">potted_plant</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">1,428</span>
+<span class="inline-flex items-center font-label-sm text-label-sm text-tertiary font-semibold">+42 this month</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">410 Landrace &amp; Heirloom</span>
+<span class="font-data-tabular text-data-tabular font-medium text-secondary">92 Families</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">In Community Circulation</span>
+<span class="material-symbols-outlined text-primary text-lg">local_shipping</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">684</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">packets active</span>
+</div>
+<div class="mt-space-sm pt-space-xs">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Return Pledge Compliance</span>
+<span class="font-data-tabular text-data-tabular font-semibold text-secondary">89.4%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 89.4%"></div>
+</div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-tertiary">Germination Viability</span>
+<span class="material-symbols-outlined text-tertiary text-lg">biotech</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">94.2%</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-secondary-fixed/60 text-on-secondary-fixed-variant font-label-sm text-label-sm">
+            Optimal
+          </span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">320 Petri batch assays</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">9 re-tests due</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Community Seed Savers</span>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">groups</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">312</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">registered growers</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">74 Master Gardeners</span>
+<span class="font-data-tabular text-data-tabular text-tertiary font-bold">+18 Spring cohort</span>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE PHENOLOGY & SOWING TIMELINE -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">calendar_month</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Seasonal Phenology &amp; Sowing Timeline</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recommended micro-actions for regional zone seed stewards across spring 2025.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="inline-flex p-1 bg-surface-container rounded-full text-on-surface-variant font-label-sm text-label-sm">
+<button class="px-3 py-1 rounded-full bg-surface-container-lowest text-secondary shadow-sm font-semibold">March</button>
+<button class="px-3 py-1 rounded-full hover:text-on-surface">April</button>
+<button class="px-3 py-1 rounded-full hover:text-on-surface">May</button>
+<button class="px-3 py-1 rounded-full hover:text-on-surface">June</button>
+</div>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/40 px-2.5 py-1 rounded-full">
+          18 Varieties Lending Today
+        </span>
+</div>
+</div>
+<!-- Timeline Bands -->
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-space-md mt-space-sm">
+<!-- March Stage 1: Direct Sow Outdoor -->
+<div class="bg-surface-container-low/70 rounded-DEFAULT p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Direct Sow Outdoors</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Frost Hardy</span>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between shadow-xs">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">French Breakfast Radish</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Raphanus sativus • 22 days</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary font-bold">Today</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between shadow-xs">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Bloomsdale Spinach</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Spinacia oleracea • 45 days</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary font-bold">In 3d</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between shadow-xs">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Windsor Fava Beans</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Vicia faba • 75 days</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">In 7d</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Soil Temp: 45°F - 55°F</span>
+<span class="material-symbols-outlined text-secondary text-sm">yard</span>
+</div>
+</div>
+<!-- March Stage 2: Indoors Under Lights -->
+<div class="bg-primary-fixed/20 rounded-DEFAULT p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Indoor Heat Mats &amp; Lights</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Crucial 4-Wk Mark</span>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between shadow-xs">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Brandywine Pink Tomato</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Solanum lycopersicum • 82 days</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-bold">Peak</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between shadow-xs">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Cherokee Purple</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Solanum lycopersicum • 80 days</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-bold">Peak</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between shadow-xs">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Habanada Mild Seasoning</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Capsicum chinense • 90 days</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Last call</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Tray Ambient: 70°F - 78°F</span>
+<span class="material-symbols-outlined text-primary text-sm">wb_incandescent</span>
+</div>
+</div>
+<!-- March Stage 3: Cold Stratification -->
+<div class="bg-surface-container-low/70 rounded-DEFAULT p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Cold Stratification</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Chilling 30-60d</span>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between shadow-xs">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Showy Milkweed</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Asclepias speciosa • Perennial</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-variant text-on-surface font-medium">Fridge #2</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between shadow-xs">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Purple Coneflower</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Echinacea purpurea • Perennial</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-variant text-on-surface font-medium">Fridge #1</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between shadow-xs">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Eastern Wild Columbine</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Aquilegia canadensis • Perennial</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary font-bold">Damp Sand</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Moisture: High / 38°F</span>
+<span class="material-symbols-outlined text-tertiary text-sm">ac_unit</span>
+</div>
+</div>
+<!-- March Stage 4: Ready For Immediate Checkout -->
+<div class="bg-secondary-fixed/20 rounded-DEFAULT p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Lending Drawer Frontline</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Self-Serve Kiosk</span>
+</div>
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex flex-col gap-space-xs shadow-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Queue</span>
+<span class="font-data-tabular text-data-tabular font-bold text-secondary">18 active bins</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Packets organized by shelf bin code. Highest reservation demand: Nightshade heirlooms and sugar snap peas.
+          </p>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Bin A-04</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Bin B-12</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">+16 more</span>
+</div>
+</div>
+<button class="mt-space-sm w-full py-2 bg-secondary text-on-secondary rounded-full font-label-md text-label-md hover:bg-tertiary transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">qr_code_scanner</span>
+<span>Open Quick Checkout</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SPLIT SECTION: INVENTORY CATALOG (8 COLS) + GROWING GUIDES & RECENT LOANS (4 COLS) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: SEED INVENTORY & REPOSITORY TABLE (8 COLS) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<!-- Filter Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">Heirloom Seed Catalog &amp; Inventory</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Archived specimens with germination logs, origin lineage, and drawer status.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Displaying</span>
+<span class="font-label-md text-label-md text-secondary font-bold">5 of 1,428</span>
+</div>
+</div>
+<!-- Filter Segmented Tabs -->
+<div class="flex flex-wrap items-center gap-space-xs mb-space-md pb-space-xs">
+<button class="px-3.5 py-1.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-medium shadow-xs">
+            All Seeds (1,428)
+          </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-colors">
+            Heirloom &amp; Rare (410)
+          </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-colors">
+            Open-Pollinated (890)
+          </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-colors">
+            Locally Adapted (128)
+          </button>
+<button class="px-3.5 py-1.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+            Low Stock Alert (14)
+          </button>
+</div>
+<!-- Modern Borderless Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low/80 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT">
+<th class="py-2.5 px-space-sm rounded-l-DEFAULT">Specimen &amp; Lineage</th>
+<th class="py-2.5 px-space-sm">Maturity</th>
+<th class="py-2.5 px-space-sm">Viability</th>
+<th class="py-2.5 px-space-sm">Stock Level</th>
+<th class="py-2.5 px-space-sm">Lending Window</th>
+<th class="py-2.5 px-space-sm text-right rounded-r-DEFAULT">Action</th>
+</tr>
+</thead>
+<tbody class="divide-none">
+<!-- Item 1: Brandywine Pink -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-DEFAULT bg-primary-fixed/40 flex items-center justify-center text-primary font-bold text-sm shrink-0">
+                      BP
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-bold text-on-surface truncate">Brandywine Pink</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic truncate">Solanum lycopersicum</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">1885 Amish Heirloom</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-primary">Solanaceae</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-tabular text-data-tabular text-on-surface font-medium">80 Days</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Full Sun</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-secondary font-data-tabular text-data-tabular font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 98%
+                  </span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Lot #24-T08</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">42 / 50</span>
+<span class="text-secondary font-bold">84%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 84%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">check_circle</span> Active Lending
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm hover:opacity-90 transition-opacity">
+                      Check Out
+                    </button>
+<button class="w-7 h-7 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 2: Black Beauty Zucchini -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary-fixed/40 flex items-center justify-center text-secondary font-bold text-sm shrink-0">
+                      BB
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-bold text-on-surface truncate">Black Beauty Zucchini</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic truncate">Cucurbita pepo</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">1920s Italian Intro</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary">Cucurbitaceae</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-tabular text-data-tabular text-on-surface font-medium">50 Days</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">High Yield</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-secondary font-data-tabular text-data-tabular font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 91%
+                  </span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Lot #24-SQ02</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">68 / 80</span>
+<span class="text-secondary font-bold">85%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">check_circle</span> Active Lending
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm hover:opacity-90 transition-opacity">
+                      Check Out
+                    </button>
+<button class="w-7 h-7 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 3: Cherokee Trail of Tears Bean (LOW STOCK) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group bg-error-container/10">
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-DEFAULT bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant font-bold text-sm shrink-0">
+                      CT
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-bold text-on-surface truncate">Cherokee Trail of Tears</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic truncate">Phaseolus vulgaris</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/40 font-label-sm text-label-sm text-primary font-semibold">Cherokee Heritage</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Pole Bean</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-tabular text-data-tabular text-on-surface font-medium">75 Days</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Trellis Rec.</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-secondary font-data-tabular text-data-tabular font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 96%
+                  </span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Lot #23-LG11</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-error font-bold">6 / 35 LOW</span>
+<span class="text-error font-bold">17%</span>
+</div>
+<div class="w-full h-1.5 bg-error-container rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 17%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed/50 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">lock_clock</span> Saver Restricted
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-opacity">
+                      Reserve
+                    </button>
+<button class="w-7 h-7 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 4: Moon & Stars Watermelon -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-DEFAULT bg-surface-variant flex items-center justify-center text-on-surface font-bold text-sm shrink-0">
+                      MS
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-bold text-on-surface truncate">Moon &amp; Stars Watermelon</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic truncate">Citrullus lanatus</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Van Doren Heirloom</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary">Organic Demeter</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-tabular text-data-tabular text-on-surface font-medium">95 Days</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Warm Soil</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-secondary font-data-tabular text-data-tabular font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 86%
+                  </span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Lot #24-ML04</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">88 / 100</span>
+<span class="text-secondary font-bold">88%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">schedule</span> Planting in May
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors">
+                      Pre-Order
+                    </button>
+<button class="w-7 h-7 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 5: Chioggia Beets -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-DEFAULT bg-primary-fixed/30 flex items-center justify-center text-primary font-bold text-sm shrink-0">
+                      CB
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-bold text-on-surface truncate">Chioggia Bull's Eye Beet</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic truncate">Beta vulgaris</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">1840 Barbabietola</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-primary">Amaranthaceae</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-tabular text-data-tabular text-on-surface font-medium">55 Days</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Cool Season</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-secondary font-data-tabular text-data-tabular font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 93%
+                  </span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Lot #24-BT09</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">54 / 60</span>
+<span class="text-secondary font-bold">90%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">check_circle</span> Active Lending
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm hover:opacity-90 transition-opacity">
+                      Check Out
+                    </button>
+<button class="w-7 h-7 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination / Controls -->
+<div class="mt-space-md pt-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Showing 1 to 5 of 1,428 varieties</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors">Previous</button>
+<button class="w-7 h-7 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center justify-center">1</button>
+<button class="w-7 h-7 rounded-full hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center">2</button>
+<button class="w-7 h-7 rounded-full hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-7 h-7 rounded-full hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center">286</button>
+<button class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors">Next</button>
+</div>
+</div>
+</div>
+<!-- VISUAL HIGHLIGHT: REGIONAL SEED PURITY & VIABILITY DISTRIBUTION -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-space-md gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wider">Assay Lab Stream</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">30-Day Germination Test Cohorts</h3>
+</div>
+<span class="font-label-md text-label-md px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-medium shadow-xs">
+            Assay Chamber #3 • Active Constant 22°C
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Solanaceae Batch #88</span>
+<span class="font-data-tabular text-data-tabular font-bold text-secondary">Day 7 of 14</span>
+</div>
+<p class="font-body-md text-body-md font-semibold text-on-surface mt-1">San Marzano Redorta</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Petri dish sample: 50 seeds, blotter paper</p>
+</div>
+<div class="mt-space-md">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sprout Emergence</span>
+<span class="font-data-tabular text-data-tabular font-bold text-secondary">48 / 50 (96%)</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 96%"></div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Fabaceae Batch #42</span>
+<span class="font-data-tabular text-data-tabular font-bold text-primary">Day 4 of 10</span>
+</div>
+<p class="font-body-md text-body-md font-semibold text-on-surface mt-1">Sugar Snap Magnolia</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vermiculite cell plug: 100 seeds</p>
+</div>
+<div class="mt-space-md">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sprout Emergence</span>
+<span class="font-data-tabular text-data-tabular font-bold text-primary">89 / 100 (89%)</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 89%"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Brassicaceae Batch #19</span>
+<span class="font-data-tabular text-data-tabular font-bold text-tertiary">Final Audit</span>
+</div>
+<p class="font-body-md text-body-md font-semibold text-on-surface mt-1">Lacinato Dinosaur Kale</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated for public envelope lending</p>
+</div>
+<div class="mt-space-md">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sprout Emergence</span>
+<span class="font-data-tabular text-data-tabular font-bold text-tertiary">98 / 100 (98%)</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 98%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: LENDING FEED + CULTIVATION QUICK GUIDES (4 COLS) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- COMMUNITY LENDING & HARVEST RETURN ACTIVITY FEED -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">sync_alt</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Live Loan Registry</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold hover:underline cursor-pointer">View All</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Real-time borrower checkouts and harvest pledge tracking.</p>
+<div class="flex flex-col gap-space-sm">
+<!-- Loan Event 1 -->
+<div class="bg-surface-container-low/60 rounded-DEFAULT p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold font-label-sm text-label-sm flex items-center justify-center">
+                  EM
+                </div>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface leading-tight">Elena Morales</p>
+<span class="font-label-sm text-label-sm text-secondary">Master Gardener • Plot #14</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary font-label-sm text-label-sm font-semibold">
+                Seed Lent
+              </span>
+</div>
+<div class="bg-surface-container-lowest rounded-DEFAULT p-2 text-xs flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate max-w-[160px]">2x Brandywine Pink, 1x Habanada</span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant">Pledged: Sep 2025</span>
+</div>
+</div>
+<!-- Loan Event 2 -->
+<div class="bg-surface-container-low/60 rounded-DEFAULT p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed font-bold font-label-sm text-label-sm flex items-center justify-center">
+                  TK
+                </div>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface leading-tight">Tobias Klein</p>
+<span class="font-label-sm text-label-sm text-primary">Neighborhood Steward</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+                Harvest Pledged
+              </span>
+</div>
+<div class="bg-surface-container-lowest rounded-DEFAULT p-2 text-xs flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate max-w-[160px]">3x Cherokee Trail Beans</span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant">Pledged: Aug 2025</span>
+</div>
+</div>
+<!-- Loan Event 3 -->
+<div class="bg-surface-container-low/60 rounded-DEFAULT p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold font-label-sm text-label-sm flex items-center justify-center">
+                  SO
+                </div>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface leading-tight">Sarah Okonjo</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">First-Time Borrower</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+                Seed Lent
+              </span>
+</div>
+<div class="bg-surface-container-lowest rounded-DEFAULT p-2 text-xs flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate max-w-[160px]">1x French Radish, 1x Spinach</span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant">Pledged: May 2025</span>
+</div>
+</div>
+<!-- Loan Event 4 (Harvest Return & Cleaned) -->
+<div class="bg-tertiary-fixed/20 rounded-DEFAULT p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary font-bold font-label-sm text-label-sm flex items-center justify-center">
+                  ML
+                </div>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface leading-tight">Marcus Lin</p>
+<span class="font-label-sm text-label-sm text-tertiary">Veteran Seed Saver</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm font-semibold">
+                Returned &amp; Cleaned
+              </span>
+</div>
+<div class="bg-surface-container-lowest rounded-DEFAULT p-2 text-xs flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate max-w-[160px]">+140g Chioggia Beet Seed</span>
+<span class="font-data-tabular text-data-tabular text-tertiary font-bold">Assay Passed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CULTIVATION & BOTANICAL STEWARDSHIP QUICK GUIDES -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">menu_book</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cultivation &amp; Seed Saving Guide</h3>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">auto_awesome</span>
+</div>
+<!-- Guide Card 1: Tomato Saving -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Solanum Heirloom</span>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold">
+              Difficulty: Easy
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Fermentation method for gelatinous sheath removal.</p>
+<div class="grid grid-cols-2 gap-space-xs my-space-xs">
+<div class="bg-surface-container-lowest p-2 rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Sunlight</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Full Sun (6-8h)</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Soil pH</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">6.2 - 6.8 Loam</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-DEFAULT text-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold block mb-0.5">Companion Stewardship</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Plant with <span class="font-semibold text-secondary">Genovese Basil</span> and <span class="font-semibold text-primary">French Marigolds</span> to deter parasitic hornworms and boost flavor aromatics.
+            </p>
+</div>
+</div>
+<!-- Guide Card 2: Squash Isolation Requirements -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Cucurbita Isolation</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+              Difficulty: Advanced
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Insect pollinated; high cross-pollination risk.</p>
+<div class="grid grid-cols-2 gap-space-xs my-space-xs">
+<div class="bg-surface-container-lowest p-2 rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Distance Barrier</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">0.5 Mile minimum</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Pollen Strategy</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Hand Pollination</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-DEFAULT text-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold block mb-0.5">Curator Field Note</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Tape blossom petals closed the afternoon prior. Use male anther to dust female stigma at dawn, then reseal to prevent hybrid drift.
+            </p>
+</div>
+</div>
+<!-- Vault Environmental Check Status -->
+<div class="bg-secondary-fixed/30 rounded-DEFAULT p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">sensors</span>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Seed Vault Sensor Mesh</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Optimal desiccated storage conditions</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 bg-secondary text-on-secondary rounded-full font-semibold">
+            All Green
+          </span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
